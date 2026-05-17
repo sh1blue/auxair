@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aux Air - Sleek AC Services & Repairs</title>
+
+    <!-- External font & icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+    /* --- CSS Custom Properties for Theming (Dark/Light Mode) --- */
+    :root {
+        /* Base Colors - Light Theme Default */
+        --bg-color: #FFFFFF;
+        --text-color: #343A40; /* Dark Gray */
+        --accent-color: #007BFF; /* Primary Blue */
+        --secondary-accent: #28A745; /* Efficiency Green */
+        --card-bg: #F8F9FA; /* Very Light Gray */
+        --border-color: #E9ECEF;
+        --shadow-color: rgba(0, 0, 0, 0.08);
+
+        /* Social Media Colors (Standard Brand Colors) */
+        --instagram-color: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        --facebook-color: #1877F2;
+        --whatsapp-color: #25D366;
+        --linkedin-color: #0A66C2;
+
+        /* Font & Layout */
+        --font-family: 'Poppins', sans-serif;
+        --header-height: 70px;
+        --transition-speed: 0.3s;
+    }
+
+    /* Dark Theme Variables */
+    .dark-theme {
+        --bg-color: #212529; /* Dark Navy/Black */
+        --text-color: #F8F9FA; /* Off-White */
+        --card-bg: #343A40; /* Darker Gray */
+        --border-color: #495057;
+        --shadow-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* --- Base Styles & Typography --- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: background-color var(--transition-speed),
+                    color var(--transition-speed),
+                    border-color var(--transition-speed),
+                    box-shadow var(--transition-speed);
+    }
+
+    body {
+        font-family: var(--font-family);
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    h1, h2, h3, h4 {
+        font-weight: 700;
+        color: var(--text-color);
+    }
+
+    h2 { font-size: 2.5em; margin-bottom: 0.5em; }
+    h3 { font-size: 1.8em; margin-bottom: 1.5em; text-align: center; }
+
+    p {
+        margin-bottom: 1em;
+    }
+
+    /* --- Header & Navigation --- */
+    header {
+        background-color: var(--card-bg);
+        border-bottom: 1px solid var(--border-color);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: var(--text-color);
+    }
+
+    .logo .dot {
+        color: var(--accent-color);
+        font-size: 1.2em;
+    }
+
+    nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: 600;
+        padding: 5px 0;
+        position: relative;
+    }
+
+    nav a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--accent-color);
+        transition: width var(--transition-speed);
+    }
+
+    nav a:hover::after {
+        width: 100%;
+    }
+
+    /* --- Buttons --- */
+    .btn {
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        border: 2px solid transparent;
+        transition: background-color var(--transition-speed),
+                    color var(--transition-speed),
+                    transform 0.1s;
+    }
+
+    .primary-btn {
+        background-color: var(--accent-color);
+        color: white;
+    }
+
+    .primary-btn:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px var(--shadow-color);
+    }
+
+    /* --- Sections --- */
+    section {
+        padding: 100px 0;
+    }
+
+    /* Home/Hero Section */
+    .hero {
+        background-color: var(--card-bg);
+        padding: 120px 0;
+    }
+
+    .hero .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero .content-left {
+        max-width: 600px;
+    }
+
+    .hero .tagline {
+        font-size: 1.25em;
+        font-weight: 400;
+        color: var(--secondary-accent);
+    }
+
+    .hero-icon {
+        font-size: 100px;
+        color: var(--accent-color);
+        animation: rotate-breathe 8s infinite ease-in-out;
+    }
+
+    @keyframes rotate-breathe {
+        0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+        50%    { transform: scale(1.05) rotate(15deg); opacity: 1; }
+    }
+
+    /* Services Section */
+    .services-grid {
+        background-color: var(--bg-color);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .service-card {
+        background-color: var(--card-bg);
+        padding: 30px;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        text-align: center;
+        box-shadow: 0 4px 15px var(--shadow-color);
+        transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px var(--shadow-color);
+    }
+
+    .service-card i {
+        font-size: 3em;
+        margin-bottom: 15px;
+    }
+
+    .icon-blue { color: var(--accent-color); }
+    .icon-green { color: var(--secondary-accent); }
+
+    .service-card h4 {
+        margin-bottom: 10px;
+    }
+
+    /* Report an Issue Section (Form) */
+    .report-issue {
+        background-color: var(--card-bg);
+        text-align: center;
+    }
+
+    .report-issue .container {
+        max-width: 700px;
+    }
+
+    #issueForm {
+        text-align: left;
+        margin-top: 30px;
+        padding: 30px;
+        background-color: var(--bg-color);
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group.half {
+        width: 48%;
+        display: inline-block;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        background-color: var(--card-bg);
+        color: var(--text-color);
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+        border-color: var(--accent-color);
+        outline: none;
+    }
+
+    .confirmation-message {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: var(--secondary-accent);
+        color: white;
+        border-radius: 5px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .confirmation-message i {
+        margin-right: 10px;
+    }
+
+    /* Connect with Us Section */
+    .connect {
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .social-btn {
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+    }
+
+    .social-btn i {
+        margin-right: 10px;
+    }
+
+    .instagram-btn { background: var(--instagram-color); }
+    .facebook-btn { background-color: var(--facebook-color); }
+    .whatsapp-btn { background-color: var(--whatsapp-color); }
+    .linkedin-btn { background-color: var(--linkedin-color); }
+    .phone-btn, .email-btn {
+        background-color: var(--text-color);
+        color: var(--bg-color);
+        border: 1px solid var(--text-color);
+    }
+
+    .dark-theme .phone-btn, .dark-theme .email-btn {
+        background-color: var(--card-bg);
+        color: var(--text-color);
+        border-color: var(--text-color);
+    }
+
+    .social-btn:hover {
+        opacity: 0.9;
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* --- Footer --- */
+    footer {
+        background-color: var(--card-bg);
+        border-top: 1px solid var(--border-color);
+        padding: 20px 0;
+    }
+
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9em;
+    }
+
+    .footer-contact a {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+
+    .toggle-btn {
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        color: var(--text-color);
+        padding: 5px;
+    }
+
+    .light-theme .toggle-btn .light-icon { display: none; }
+    .dark-theme .toggle-btn .dark-icon { display: none; }
+
+    /* Initial state for icons in the button, will be overridden by JS */
+    .toggle-btn .dark-icon { display: none; }
+
+    /* --- Responsiveness --- */
+    @media (max-width: 992px) {
+        .hero .container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero .content-right {
+            margin-top: 50px;
+        }
+
+        .hero h2 { font-size: 2em; }
+        .hero .tagline { font-size: 1.1em; }
+
+        nav {
+            display: none; /* Simple mobile nav hiding for this example */
+        }
+
+        header .container {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        section { padding: 80px 0; }
+
+        .form-group.half {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .social-links {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-btn {
+            width: 90%;
+            max-width: 300px;
+        }
+
+        footer .container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        footer .toggle-btn {
+            margin-top: 10px;
+        }
+    }
+    </style>
+</head>
+<body class="light-theme">
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Aux Air<span class="dot">.</span></h1>
+            <nav>
+                <a href="#home" class="scroll-link">Home</a>
+                <a href="#services" class="scroll-link">Services</a>
+                <a href="#report" class="scroll-link">Report an Issue</a>
+                <a href="#connect" class="scroll-link">Connect</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="content-left">
+                    <h2>The Future of Cooling.</h2>
+                    <p class="tagline">Aux Air is committed to delivering unparalleled <strong>efficiency</strong> and <strong>high-quality AC repair and maintenance</strong> for a sustainable and comfortable environment.</p>
+                    <p>We specialize in keeping your residential and commercial spaces at the perfect temperature with reliable, modern, and swift service solutions delivered to your doorstep.</p>
+                    <a href="#services" class="btn primary-btn scroll-link">Explore Our Services</a>
+                </div>
+                <div class="content-right">
+                    <i class="fas fa-snowflake hero-icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-grid">
+            <div class="container">
+                <h3>Our Technical Expertise</h3>
+                <div class="grid">
+                    <div class="service-card">
+                        <i class="fas fa-cogs icon-blue"></i>
+                        <h4>AC Installation and Uninstallation</h4>
+                        <p>Flawless installation and uninstallation of all unit types, ensuring optimal system performance and longevity from day one.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-screwdriver-wrench icon-green"></i>
+                        <h4>Repairs & Diagnostics</h4>
+                        <p>Fast, accurate diagnostics and durable repairs to restore your AC unit's full functionality with minimal downtime.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-hand-holding-box icon-blue"></i>
+                        <h4>Coil Cleaning </h4>
+                        <p>Using proper tools and solutions to safely remove buildup, improving cooling efficiency and leaving the system clean and reliable.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-gas-pump icon-green"></i>
+                        <h4>Gas Refilling (Refrigerant)</h4>
+                        <p>Safe and precise refrigerant checks and refills, restoring cooling capacity and protecting the compressor.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-wind icon-blue"></i>
+                        <h4>Duct Cleaning</h4>
+                        <p>Thorough cleaning of ductwork to improve air quality and ensure efficient airflow throughout your property.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-line icon-green"></i>
+                        <h4>AC Servicing</h4>
+                        <p>Thorough cleaning, inspection, and tuning using proper tools to ensure efficient cooling, reliability, and customer satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="report" class="report-issue">
+            <div class="container">
+                <h3>Report an Issue</h3>
+                <p>Describe your AC problem and one of our expert technicians will contact you shortly.</p>
+                <form id="issueForm">
+                    <div class="form-group">
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address (Optional)</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Describe the Issue*</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Submit Report</button>
+                </form>
+                <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    Thank you! We’ve received your message and will contact you soon.
+                </div>
+            </div>
+        </section>
+
+        <section id="connect" class="connect">
+            <div class="container">
+                <h3>Connect with Aux Air</h3>
+                <p>We're available through multiple platforms—choose what works best for you!</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/aux.air?igsh=b25vdWgxZW5tbGNj" target="_blank" class="social-btn instagram-btn" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+
+                    <a href="https://wa.me/8943477156" target="_blank" class="social-btn whatsapp-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    
+                    <a href="+91 6282479271" class="social-btn phone-btn" aria-label="Call Us"><i class="fas fa-phone-alt"></i> Call Us</a>
+                    <a href="Swalihsaly369@gmail.com" class="social-btn email-btn" aria-label="Email Us"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Aux Air. All rights reserved.</p>
+            <p class="footer-contact">
+                Quick Contact: <a href="tel:+91 8943477156">+91 8943477156</a> | <a href="mailto:Swalihsaly369@gmail.com">Swalihsaly369@gmail.com</a>
+            </p>
+            <button id="themeToggle" class="btn toggle-btn" aria-label="Toggle Dark/Light Theme">
+                <i class="fas fa-moon light-icon"></i>
+                <i class="fas fa-sun dark-icon"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.body;
+        const themeToggle = document.getElementById('themeToggle');
+        const issueForm = document.getElementById('issueForm');
+        const confirmationMessage = document.getElementById('confirmationMessage');
+        const navLinks = document.querySelectorAll('.scroll-link, nav a');
+
+        // --- 1. Theme Toggle Functionality ---
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.className = savedTheme;
+        } else {
+            body.className = 'light-theme';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('light-theme')) {
+                body.className = 'dark-theme';
+                localStorage.setItem('theme', 'dark-theme');
+            } else {
+                body.className = 'light-theme';
+                localStorage.setItem('theme', 'light-theme');
+            }
+        });
+
+        // --- 2. Smooth Scroll for Navigation ---
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // --- 3. Form Submission Handling (Client-Side Simulation) ---
+        issueForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const submitButton = issueForm.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerText = 'Submitting...';
+
+            const formData = new FormData(issueForm);
+            const data = Object.fromEntries(formData.entries());
+            console.log('Form Submitted (Data to be sent):', data);
+
+            // Simulate successful submission
+            issueForm.style.display = 'none';
+            confirmationMessage.style.display = 'flex';
+
+            setTimeout(() => {
+                issueForm.reset();
+                confirmationMessage.style.display = 'none';
+                issueForm.style.display = 'block';
+                submitButton.disabled = false;
+                submitButton.innerText = 'Submit Report';
+            }, 8000);
+        });
+    });
+    </script>
+
+</body>
+</html>
