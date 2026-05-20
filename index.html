@@ -3,7 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auxcare - Sleek AC Services & Repairs</title>
+
+    <!-- ✅ SEO: Title Tag with Primary Keywords + Location -->
+    <title>Auxcare | AC Repair & Service in Ernakulam, North Paravur | Kerala</title>
+
+    <!-- ✅ SEO: Meta Description with Primary + Service Keywords -->
+    <meta name="description" content="Auxcare offers professional AC repair, installation, gas refilling, coil & duct cleaning in Ernakulam, North Paravur and Manjaly, Kerala. Fast doorstep service. Call us today!">
+
+    <!-- ✅ SEO: Keywords Tag -->
+    <meta name="keywords" content="AC repair Ernakulam, AC service North Paravur, air conditioner repair Kerala, AC maintenance Manjaly, AC installation Ernakulam, refrigerant refill Kerala, coil cleaning AC service, duct cleaning Ernakulam, AC gas refilling North Paravur, air conditioner diagnostics Kerala, AC not cooling repair Ernakulam, best AC service near North Paravur, AC technician home service Kerala, affordable AC repair Ernakulam, AC servicing at doorstep Kerala">
+
+    <!-- ✅ SEO: Robots - allow Google to index -->
+    <meta name="robots" content="index, follow">
+
+    <!-- ✅ SEO: Author -->
+    <meta name="author" content="Auxcare">
+
+    <!-- ✅ SEO: Theme Color for mobile browsers -->
+    <meta name="theme-color" content="#007BFF">
+
+    <!-- ✅ SEO: Canonical URL - replace with your real domain -->
+    <link rel="canonical" href="https://www.auxcare.in/">
+
+    <!-- ✅ SEO: Open Graph Tags for WhatsApp / Instagram link previews -->
+    <meta property="og:title" content="Auxcare | AC Repair & Service in Ernakulam, Kerala">
+    <meta property="og:description" content="Professional AC repair, installation, gas refilling and duct cleaning in Ernakulam, North Paravur and Manjaly. Doorstep service available.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.auxcare.in/">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- ✅ SEO: Local Business Schema - structured data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Auxcare",
+      "description": "Professional AC repair, installation, gas refilling, coil cleaning and duct cleaning services in Ernakulam, North Paravur and Manjaly, Kerala.",
+      "telephone": "+918943477156",
+      "email": "Swalihsaly369@gmail.com",
+      "url": "https://www.auxcare.in/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "North Paravur",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "areaServed": ["Ernakulam", "North Paravur", "Manjaly", "Kerala"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AC Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Installation and Uninstallation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Repairs and Diagnostics" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coil Cleaning" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gas Refilling (Refrigerant)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Duct Cleaning" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Servicing" } }
+        ]
+      }
+    }
+    </script>
 
     <!-- External font & icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -12,37 +71,32 @@
     <style>
     /* --- CSS Custom Properties for Theming (Dark/Light Mode) --- */
     :root {
-        /* Base Colors - Light Theme Default */
         --bg-color: #FFFFFF;
-        --text-color: #343A40; /* Dark Gray */
-        --accent-color: #007BFF; /* Primary Blue */
-        --secondary-accent: #28A745; /* Efficiency Green */
-        --card-bg: #F8F9FA; /* Very Light Gray */
+        --text-color: #343A40;
+        --accent-color: #007BFF;
+        --secondary-accent: #28A745;
+        --card-bg: #F8F9FA;
         --border-color: #E9ECEF;
         --shadow-color: rgba(0, 0, 0, 0.08);
 
-        /* Social Media Colors (Standard Brand Colors) */
         --instagram-color: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
         --facebook-color: #1877F2;
         --whatsapp-color: #25D366;
         --linkedin-color: #0A66C2;
 
-        /* Font & Layout */
         --font-family: 'Poppins', sans-serif;
         --header-height: 70px;
         --transition-speed: 0.3s;
     }
 
-    /* Dark Theme Variables */
     .dark-theme {
-        --bg-color: #212529; /* Dark Navy/Black */
-        --text-color: #F8F9FA; /* Off-White */
-        --card-bg: #343A40; /* Darker Gray */
+        --bg-color: #212529;
+        --text-color: #F8F9FA;
+        --card-bg: #343A40;
         --border-color: #495057;
         --shadow-color: rgba(0, 0, 0, 0.4);
     }
 
-    /* --- Base Styles & Typography --- */
     * {
         margin: 0;
         padding: 0;
@@ -74,9 +128,7 @@
     h2 { font-size: 2.5em; margin-bottom: 0.5em; }
     h3 { font-size: 1.8em; margin-bottom: 1.5em; text-align: center; }
 
-    p {
-        margin-bottom: 1em;
-    }
+    p { margin-bottom: 1em; }
 
     /* --- Header & Navigation --- */
     header {
@@ -96,6 +148,7 @@
         align-items: center;
     }
 
+    /* ✅ SEO FIX: Logo is now a <div> so <h1> can be used properly in hero */
     .logo {
         font-size: 1.5em;
         font-weight: 700;
@@ -127,9 +180,7 @@
         transition: width var(--transition-speed);
     }
 
-    nav a:hover::after {
-        width: 100%;
-    }
+    nav a:hover::after { width: 100%; }
 
     /* --- Buttons --- */
     .btn {
@@ -145,10 +196,7 @@
                     transform 0.1s;
     }
 
-    .primary-btn {
-        background-color: var(--accent-color);
-        color: white;
-    }
+    .primary-btn { background-color: var(--accent-color); color: white; }
 
     .primary-btn:hover {
         background-color: #0056b3;
@@ -157,47 +205,424 @@
     }
 
     /* --- Sections --- */
-    section {
-        padding: 100px 0;
+    section { padding: 100px 0; }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 50%, #f0fff4 100%);
+        padding: 100px 0 80px;
+        position: relative;
+        overflow: hidden;
     }
 
-    /* Home/Hero Section */
-    .hero {
-        background-color: var(--card-bg);
-        padding: 120px 0;
+    .dark-theme .hero {
+        background: linear-gradient(135deg, #1a2a3a 0%, #212529 50%, #1a2e1a 100%);
+    }
+
+    /* subtle background grid pattern */
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(0,123,255,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,123,255,0.04) 1px, transparent 1px);
+        background-size: 40px 40px;
+        pointer-events: none;
     }
 
     .hero .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 40px;
+        position: relative;
+        z-index: 1;
     }
 
-    .hero .content-left {
-        max-width: 600px;
+    .hero .content-left { max-width: 560px; }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(0,123,255,0.1);
+        border: 1px solid rgba(0,123,255,0.25);
+        color: var(--accent-color);
+        font-size: 0.78em;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 50px;
+        margin-bottom: 18px;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-badge i { font-size: 0.9em; }
+
+    /* ✅ SEO FIX: h1 styled to match original h2 look */
+    .hero h1 {
+        font-size: 2.6em;
+        margin-bottom: 0.4em;
+        font-weight: 700;
+        color: var(--text-color);
+        line-height: 1.2;
+    }
+
+    .hero h1 span.highlight {
+        color: var(--accent-color);
+        position: relative;
     }
 
     .hero .tagline {
-        font-size: 1.25em;
+        font-size: 1.1em;
         font-weight: 400;
         color: var(--secondary-accent);
+        margin-bottom: 1em;
     }
 
-    .hero-icon {
-        font-size: 100px;
+    .hero p {
+        font-size: 0.97em;
+        color: var(--text-color);
+        opacity: 0.85;
+        margin-bottom: 1.6em;
+    }
+
+    /* Hero CTA row */
+    .hero-cta-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 2.5em;
+    }
+
+    .secondary-btn {
+        background: transparent;
         color: var(--accent-color);
-        animation: rotate-breathe 5s infinite ease-in-out;
+        border: 2px solid var(--accent-color);
+    }
+
+    .secondary-btn:hover {
+        background: var(--accent-color);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    /* Trust badges row */
+    .trust-row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 0.82em;
+        font-weight: 600;
+        color: var(--text-color);
+        opacity: 0.75;
+    }
+
+    .trust-item i {
+        color: var(--secondary-accent);
+        font-size: 1em;
+    }
+
+    /* ========== RIGHT SIDE: Visual Panel ========== */
+    .hero-visual {
+        position: relative;
+        width: 420px;
+        min-width: 320px;
+        flex-shrink: 0;
+    }
+
+    /* Main AC unit illustration card */
+    .ac-illustration {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0,123,255,0.15), 0 4px 20px rgba(0,0,0,0.08);
+        padding: 30px;
+        position: relative;
+        z-index: 2;
+        border: 1px solid rgba(0,123,255,0.1);
+    }
+
+    .dark-theme .ac-illustration {
+        background: #2c3340;
+        border-color: rgba(255,255,255,0.08);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    /* AC unit SVG-style illustration using pure CSS */
+    .ac-unit {
+        width: 100%;
+        background: linear-gradient(145deg, #1a1f35, #2d3561);
+        border-radius: 14px;
+        padding: 18px 20px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .ac-unit::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #007BFF, #00d4ff, #007BFF);
+        background-size: 200% 100%;
+        animation: shimmer 2s infinite linear;
+    }
+
+    @keyframes shimmer {
+        0%   { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+    }
+
+    .ac-brand-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 14px;
+    }
+
+    .ac-brand {
+        color: white;
+        font-weight: 700;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+    }
+
+    .ac-power-dot {
+        width: 10px;
+        height: 10px;
+        background: #28A745;
+        border-radius: 50%;
+        box-shadow: 0 0 8px #28A745;
+        animation: pulse-dot 1.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse-dot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50%       { opacity: 0.6; transform: scale(1.3); }
+    }
+
+    /* Vents */
+    .ac-vents {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 14px;
+    }
+
+    .ac-vent {
+        height: 6px;
+        background: rgba(255,255,255,0.08);
+        border-radius: 3px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ac-vent::after {
+        content: '';
+        position: absolute;
+        top: 0; left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(0,212,255,0.3), transparent);
+        animation: vent-flow 2.5s infinite ease-in-out;
+    }
+
+    .ac-vent:nth-child(2)::after { animation-delay: 0.3s; }
+    .ac-vent:nth-child(3)::after { animation-delay: 0.6s; }
+    .ac-vent:nth-child(4)::after { animation-delay: 0.9s; }
+
+    @keyframes vent-flow {
+        0%   { left: -100%; }
+        100% { left: 200%; }
+    }
+
+    /* Temp display */
+    .ac-temp-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ac-temp {
+        font-size: 2.2em;
+        font-weight: 700;
+        color: #00d4ff;
+        font-family: 'Courier New', monospace;
+    }
+
+    .ac-status {
+        text-align: right;
+    }
+
+    .ac-status-label {
+        font-size: 0.65em;
+        color: rgba(255,255,255,0.5);
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .ac-status-value {
+        font-size: 0.85em;
+        color: #28A745;
+        font-weight: 600;
+    }
+
+    /* Stats row below AC unit */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .stat-box {
+        background: var(--card-bg);
+        border-radius: 10px;
+        padding: 12px 10px;
+        text-align: center;
+        border: 1px solid var(--border-color);
+        transition: transform 0.2s;
+    }
+
+    .dark-theme .stat-box {
+        background: #343A40;
+    }
+
+    .stat-box:hover { transform: translateY(-2px); }
+
+    .stat-number {
+        font-size: 1.4em;
+        font-weight: 700;
+        color: var(--accent-color);
+        display: block;
+        line-height: 1;
+        margin-bottom: 4px;
+    }
+
+    .stat-label {
+        font-size: 0.68em;
+        color: var(--text-color);
+        opacity: 0.65;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    /* Floating pill badges around the card */
+    .float-pill {
+        position: absolute;
+        background: white;
+        border-radius: 50px;
+        padding: 8px 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.78em;
+        font-weight: 600;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        z-index: 3;
+        white-space: nowrap;
+        border: 1px solid rgba(0,0,0,0.06);
+        animation: float-bob 3s infinite ease-in-out;
+    }
+
+    .dark-theme .float-pill {
+        background: #3a4150;
+        border-color: rgba(255,255,255,0.1);
+        color: #F8F9FA;
+    }
+
+    .float-pill i { font-size: 1.1em; }
+
+    .pill-1 {
+        top: -18px;
+        right: 20px;
+        animation-delay: 0s;
+        color: #343A40;
+    }
+
+    .pill-2 {
+        bottom: 60px;
+        left: -30px;
+        animation-delay: 1s;
+        color: #343A40;
+    }
+
+    .pill-3 {
+        bottom: -18px;
+        right: 30px;
+        animation-delay: 2s;
+        color: #343A40;
+    }
+
+    @keyframes float-bob {
+        0%, 100% { transform: translateY(0px); }
+        50%       { transform: translateY(-6px); }
+    }
+
+    /* Decorative blobs behind the card */
+    .hero-blob-1 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba(0,123,255,0.12), transparent 70%);
+        border-radius: 50%;
+        top: -40px;
+        right: -40px;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .hero-blob-2 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, rgba(40,167,69,0.1), transparent 70%);
+        border-radius: 50%;
+        bottom: 20px;
+        left: -30px;
+        z-index: 1;
+        pointer-events: none;
     }
 
     @keyframes rotate-breathe {
         0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
-        50%    { transform: scale(1.05) rotate(15deg); opacity: 1; }
+        50%       { transform: scale(1.05) rotate(15deg); opacity: 1; }
+    }
+
+    /* Responsive hero */
+    @media (max-width: 992px) {
+        .hero .container {
+            flex-direction: column;
+            text-align: center;
+        }
+        .hero-visual {
+            width: 100%;
+            max-width: 380px;
+            margin: 0 auto;
+        }
+        .pill-2 { left: -10px; }
+        .trust-row { justify-content: center; }
+        .hero-cta-row { justify-content: center; }
+        .hero h1 { font-size: 2em; }
+        .hero .tagline { font-size: 1em; }
+    }
+
+    @media (max-width: 500px) {
+        .hero-visual { min-width: unset; }
+        .float-pill { font-size: 0.7em; padding: 6px 10px; }
+        .pill-2 { left: 0; }
     }
 
     /* Services Section */
-    .services-grid {
-        background-color: var(--bg-color);
-    }
+    .services-grid { background-color: var(--bg-color); }
 
     .grid {
         display: grid;
@@ -220,27 +645,20 @@
         box-shadow: 0 8px 20px var(--shadow-color);
     }
 
-    .service-card i {
-        font-size: 3em;
-        margin-bottom: 15px;
-    }
+    .service-card i { font-size: 3em; margin-bottom: 15px; }
 
     .icon-blue { color: var(--accent-color); }
     .icon-green { color: var(--secondary-accent); }
 
-    .service-card h4 {
-        margin-bottom: 10px;
-    }
+    .service-card h4 { margin-bottom: 10px; }
 
-    /* Report an Issue Section (Form) */
+    /* Report an Issue Section */
     .report-issue {
         background-color: var(--card-bg);
         text-align: center;
     }
 
-    .report-issue .container {
-        max-width: 700px;
-    }
+    .report-issue .container { max-width: 700px; }
 
     #issueForm {
         text-align: left;
@@ -251,9 +669,7 @@
         border: 1px solid var(--border-color);
     }
 
-    .form-group {
-        margin-bottom: 20px;
-    }
+    .form-group { margin-bottom: 20px; }
 
     .form-group.half {
         width: 48%;
@@ -292,14 +708,10 @@
         justify-content: center;
     }
 
-    .confirmation-message i {
-        margin-right: 10px;
-    }
+    .confirmation-message i { margin-right: 10px; }
 
-    /* Connect with Us Section */
-    .connect {
-        text-align: center;
-    }
+    /* Connect Section */
+    .connect { text-align: center; }
 
     .social-links {
         margin-top: 30px;
@@ -317,46 +729,24 @@
         border-radius: 8px;
         text-decoration: none;
         color: white;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: var(--font-family);
         font-weight: 600;
         margin: 8px;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
-    .social-btn i {
-        margin-right: 10px;
-    }
+    .social-btn i { margin-right: 10px; }
 
     .instagram-btn { background: var(--instagram-color); }
-    .facebook-btn { background-color: var(--facebook-color); }
-    .whatsapp-btn { background-color: var(--whatsapp-color); }
-    .linkedin-btn { background-color: var(--linkedin-color); }
-    .call-btn {
-        background-color: #0056b3; 
-    }
-
-    
-    .email-btn {
-        background-color: #DB4437;
-    }
-
-    /* Hover effects */
-     .social-btn:hover {
-         transform: translateY(-2px);
-         box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-         opacity: 0.95;
-    }
-
-     /* Icon spacing */
-     .social-btn i {
-          margin-right: 10px;
-    }
+    .whatsapp-btn  { background-color: var(--whatsapp-color); }
+    .call-btn      { background-color: #0056b3; }
+    .email-btn     { background-color: #DB4437; }
 
     .social-btn:hover {
-        opacity: 0.9;
         transform: scale(1.05);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        opacity: 0.95;
     }
 
     /* --- Footer --- */
@@ -384,12 +774,11 @@
         font-size: 1.5em;
         color: var(--text-color);
         padding: 5px;
+        cursor: pointer;
     }
 
     .light-theme .toggle-btn .light-icon { display: none; }
-    .dark-theme .toggle-btn .dark-icon { display: none; }
-
-    /* Initial state for icons in the button, will be overridden by JS */
+    .dark-theme .toggle-btn .dark-icon  { display: none; }
     .toggle-btn .dark-icon { display: none; }
 
     /* --- Responsiveness --- */
@@ -398,49 +787,17 @@
             flex-direction: column;
             text-align: center;
         }
-
-        .hero .content-right {
-            margin-top: 50px;
-        }
-
-        .hero h2 { font-size: 2em; }
-        .hero .tagline { font-size: 1.1em; }
-
-        nav {
-            display: none; /* Simple mobile nav hiding for this example */
-        }
-
-        header .container {
-            justify-content: center;
-        }
+        nav { display: none; }
+        header .container { justify-content: center; }
     }
 
     @media (max-width: 768px) {
         section { padding: 80px 0; }
-
-        .form-group.half {
-            width: 100%;
-            margin-right: 0;
-        }
-
-        .social-links {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .social-btn {
-            width: 90%;
-            max-width: 300px;
-        }
-
-        footer .container {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        footer .toggle-btn {
-            margin-top: 10px;
-        }
+        .form-group.half { width: 100%; margin-right: 0; }
+        .social-links { flex-direction: column; align-items: center; }
+        .social-btn { width: 90%; max-width: 300px; }
+        footer .container { flex-direction: column; text-align: center; }
+        footer .toggle-btn { margin-top: 10px; }
     }
     </style>
 </head>
@@ -448,8 +805,9 @@
 
     <header>
         <div class="container">
-            <h1 class="logo">Auxcare<span class="dot">.</span></h1>
-            <nav>
+            <!-- ✅ SEO FIX: Logo changed from <h1> to <div> -->
+            <div class="logo">Auxcare<span class="dot">.</span></div>
+            <nav aria-label="Main navigation">
                 <a href="#home" class="scroll-link">Home</a>
                 <a href="#services" class="scroll-link">Services</a>
                 <a href="#report" class="scroll-link">Report an Issue</a>
@@ -461,51 +819,134 @@
     <main>
         <section id="home" class="hero">
             <div class="container">
+
+                <!-- LEFT: Text Content -->
                 <div class="content-left">
-                    <h2>The Future of Cooling.</h2>
-                    <p class="tagline">Auxcare is committed to delivering unparalleled <strong>efficiency</strong> and <strong>high-quality AC repair and maintenance</strong> for a sustainable and comfortable environment.</p>
-                    <p>We specialize in keeping your residential and commercial spaces at the perfect temperature with reliable, modern, and swift service solutions delivered to your doorstep.</p>
-                    <a href="#services" class="btn primary-btn scroll-link">Explore Our Services</a>
+                    <div class="hero-badge">
+                        <i class="fas fa-map-marker-alt"></i> Serving Ernakulam, North Paravur & Manjaly
+                    </div>
+
+                    <!-- ✅ SEO: Real h1 with primary keyword -->
+                    <h1>Expert <span class="highlight">AC Repair</span> & Services in Ernakulam, Kerala</h1>
+
+                    <p class="tagline">Fast doorstep service · All brands · Homes & Offices</p>
+
+                    <p>We specialize in AC repair, installation, gas refilling, coil cleaning and duct cleaning — with same-day doorstep service across Ernakulam, North Paravur, and Manjaly. Whether your AC is not cooling, needs a refrigerant refill, or requires a full annual service, our expert technicians come to you.</p>
+
+                    <div class="hero-cta-row">
+                        <a href="#services" class="btn primary-btn scroll-link">Explore Services</a>
+                        <a href="https://wa.me/918943477156" class="btn secondary-btn" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Us
+                        </a>
+                    </div>
+
+                    <!-- Trust signals -->
+                    <div class="trust-row">
+                        <span class="trust-item"><i class="fas fa-check-circle"></i> Certified Technicians</span>
+                        <span class="trust-item"><i class="fas fa-check-circle"></i> Same-Day Service</span>
+                        <span class="trust-item"><i class="fas fa-check-circle"></i> All AC Brands</span>
+                    </div>
                 </div>
-                <div class="content-right">
-                    <i class="fas fa-snowflake hero-icon"></i>
+
+                <!-- RIGHT: Visual Panel -->
+                <div class="hero-visual">
+
+                    <!-- Decorative blobs -->
+                    <div class="hero-blob-1"></div>
+                    <div class="hero-blob-2"></div>
+
+                    <!-- Floating pill badges -->
+                    <div class="float-pill pill-1">
+                        <i class="fas fa-bolt" style="color:#f59e0b;"></i> Same-Day Service
+                    </div>
+                    <div class="float-pill pill-2">
+                        <i class="fas fa-shield-alt" style="color:#007BFF;"></i> Service Warranty
+                    </div>
+                    <div class="float-pill pill-3">
+                        <i class="fas fa-star" style="color:#f59e0b;"></i> 5-Star Rated
+                    </div>
+
+                    <!-- Main AC illustration card -->
+                    <div class="ac-illustration">
+
+                        <!-- CSS AC unit graphic -->
+                        <div class="ac-unit">
+                            <div class="ac-brand-row">
+                                <span class="ac-brand">AUXCARE</span>
+                                <span class="ac-power-dot" title="Online"></span>
+                            </div>
+                            <div class="ac-vents">
+                                <div class="ac-vent"></div>
+                                <div class="ac-vent"></div>
+                                <div class="ac-vent"></div>
+                                <div class="ac-vent"></div>
+                            </div>
+                            <div class="ac-temp-row">
+                                <span class="ac-temp">18°C</span>
+                                <div class="ac-status">
+                                    <span class="ac-status-label">Status</span>
+                                    <span class="ac-status-value">✓ Serviced</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats row -->
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">ACs Serviced</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number">6</span>
+                                <span class="stat-label">Services Offered</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Areas Covered</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
         </section>
 
         <section id="services" class="services-grid">
             <div class="container">
-                <h3>Our Technical Expertise</h3>
+                <!-- ✅ SEO: Section heading includes service keyword -->
+                <h2>Our AC Services in Ernakulam & North Paravur</h2>
                 <div class="grid">
+                    <!-- ✅ SEO: Service card headings use service-specific keywords -->
                     <div class="service-card">
-                        <i class="fas fa-cogs icon-blue"></i>
-                        <h4>AC Installation and Uninstallation</h4>
-                        <p>Flawless installation and uninstallation of all unit types, ensuring optimal system performance and longevity from day one.</p>
+                        <i class="fas fa-cogs icon-blue" aria-hidden="true"></i>
+                        <h3>AC Installation & Uninstallation</h3>
+                        <p>Planning to install a new split AC or window AC at your home or office in Ernakulam? Our technicians come directly to your location — whether it's a flat in Kakkanad, a shop in North Paravur, or an office in Aluva — and handle complete AC installation with proper bracket fitting, copper piping, and power connection. We also do safe uninstallation when shifting homes or upgrading units. All brands supported including LG, Samsung, Daikin, Voltas, and Hitachi.</p>
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-screwdriver-wrench icon-green"></i>
-                        <h4>Repairs & Diagnostics</h4>
-                        <p>Fast, accurate diagnostics and durable repairs to restore your AC unit's full functionality with minimal downtime.</p>
+                        <i class="fas fa-screwdriver-wrench icon-green" aria-hidden="true"></i>
+                        <h3>AC Repairs & Diagnostics</h3>
+                        <p>Is your AC not cooling properly even after running for hours? In Kerala's hot and humid climate, AC breakdowns are common — especially during summer and monsoon season. Our experts visit your home or office in Ernakulam, diagnose the exact problem on the spot, and carry out lasting repairs. We fix issues like compressor failure, PCB faults, water leakage, fan motor problems, and more. Fast same-day AC repair service available across North Paravur and Manjaly.</p>
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-hand-holding-box icon-blue"></i>
-                        <h4>Coil Cleaning </h4>
-                        <p>Using proper tools and solutions to safely remove buildup, improving cooling efficiency and leaving the system clean and reliable.</p>
+                        <i class="fas fa-hand-holding-box icon-blue" aria-hidden="true"></i>
+                        <h3>Coil Cleaning Service</h3>
+                        <p>Kerala's high humidity causes dust, mold, and fungal buildup on AC coils very quickly — making your AC work harder and cool less. Our coil cleaning service in Ernakulam removes this buildup from both the indoor evaporator coil and outdoor condenser coil using professional-grade tools and safe cleaning solutions. Result: better cooling, lower electricity bills, and fresher air in your home or workplace. Ideal before summer and after monsoon season.</p>
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-gas-pump icon-green"></i>
-                        <h4>Gas Refilling (Refrigerant)</h4>
-                        <p>Safe and precise refrigerant checks and refills, restoring cooling capacity and protecting the compressor.</p>
+                        <i class="fas fa-gas-pump icon-green" aria-hidden="true"></i>
+                        <h3>Gas Refilling (Refrigerant)</h3>
+                        <p>If your AC is running but not giving cold air, low refrigerant gas is one of the most common reasons — especially in older units across Kerala homes and offices. Our technicians visit your location in Ernakulam, North Paravur, or Manjaly, check the gas pressure with proper gauges, detect leaks if any, and refill the correct refrigerant (R22 or R32) at the right level. Safe, precise, and affordable AC gas refilling service at your doorstep — no need to dismantle the unit.</p>
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-wind icon-blue"></i>
-                        <h4>Duct Cleaning</h4>
-                        <p>Thorough cleaning of ductwork to improve air quality and ensure efficient airflow throughout your property.</p>
+                        <i class="fas fa-wind icon-blue" aria-hidden="true"></i>
+                        <h3>Duct Cleaning Ernakulam</h3>
+                        <p>Commercial buildings, offices, hospitals, and hotels in Ernakulam that use central AC systems need regular duct cleaning to maintain healthy air quality. Kerala's damp climate causes dust, allergens, and bacteria to accumulate inside ducts — leading to musty smells and poor airflow. Auxcare's professional duct cleaning team visits your premises and thoroughly cleans the entire ductwork system, improving air circulation and reducing health risks for everyone inside the building.</p>
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-chart-line icon-green"></i>
-                        <h4>AC Servicing</h4>
-                        <p>Thorough cleaning, inspection, and tuning using proper tools to ensure efficient cooling, reliability, and customer satisfaction.</p>
+                        <i class="fas fa-chart-line icon-green" aria-hidden="true"></i>
+                        <h3>AC Servicing & Maintenance</h3>
+                        <p>Regular AC servicing is essential in Kerala — dust from roads, salt air from the coast, and high moisture levels all affect your AC's performance over time. Our complete AC service package includes filter cleaning, coil washing, drain pipe clearing, gas pressure check, and full system inspection — all done at your home or office in Ernakulam, North Paravur, or Manjaly. We recommend servicing every 3 months for best results. Book a doorstep AC service today and keep your unit running at peak efficiency.</p>
                     </div>
                 </div>
             </div>
@@ -513,24 +954,24 @@
 
         <section id="report" class="report-issue">
             <div class="container">
-                <h3>Report an Issue</h3>
-                <p>Describe your AC problem and one of our expert technicians will contact you shortly.</p>
-                <form id="issueForm">
+                <h2>Report an AC Issue</h2>
+                <p>Describe your AC problem and one of our expert AC technicians in Kerala will contact you shortly.</p>
+                <form id="issueForm" aria-label="Report an AC issue">
                     <div class="form-group">
                         <label for="name">Name*</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required autocomplete="name">
                     </div>
                     <div class="form-group half">
                         <label for="email">Email*</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required autocomplete="email">
                     </div>
                     <div class="form-group half">
                         <label for="phone">Phone Number*</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel">
                     </div>
                     <div class="form-group">
                         <label for="address">Address (Optional)</label>
-                        <input type="text" id="address" name="address">
+                        <input type="text" id="address" name="address" autocomplete="street-address">
                     </div>
                     <div class="form-group">
                         <label for="message">Describe the Issue*</label>
@@ -538,48 +979,46 @@
                     </div>
                     <button type="submit" class="btn primary-btn">Submit Report</button>
                 </form>
-                <div id="confirmationMessage" class="confirmation-message" style="display: none;">
-                    <i class="fas fa-check-circle"></i>
-                    Thank you! We’ve received your message and will contact you soon.
+                <div id="confirmationMessage" class="confirmation-message" style="display: none;" role="alert">
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    Thank you! We've received your message and will contact you soon.
                 </div>
             </div>
         </section>
 
         <section id="connect" class="connect">
             <div class="container">
-                <h3>Connect with Auxcare</h3>
-                <p>Ernakulam, N.paravur, Manjaly<p/>
-                <p>We're available through multiple platforms—choose what works best for you!</p>
-              <div class="social-links">
-                <a href="https://www.instagram.com/aux.care_?igsh=b25vdWgxZW5tbGNj" target="_blank" class="social-btn instagram-btn" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-
-                <a href="https://wa.me/918943477156" target="_blank" class="social-btn whatsapp-btn" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-     
-                <a href="tel:+916282479271" class="social-btn call-btn">
-                    <i class="fas fa-phone-alt"></i> Call Us
-                </a>
-
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Swalihsaly369@gmail.com" target="_blank" class="social-btn email-btn">
-                    <i class="fab fa-google"></i> Gmail Us
-                </a>
-              </div>
+                <h2>Connect with Auxcare</h2>
+                <!-- ✅ SEO FIX: Corrected closing tag, expanded location name -->
+                <p>Serving Ernakulam, North Paravur, and Manjaly, Kerala</p>
+                <p>We're available through multiple platforms — choose what works best for you!</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/aux.care_?igsh=b25vdWgxZW5tbGNj" target="_blank" rel="noopener noreferrer" class="social-btn instagram-btn" aria-label="Follow Auxcare on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+                    </a>
+                    <a href="https://wa.me/918943477156" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp-btn" aria-label="Chat with Auxcare on WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+                    </a>
+                    <a href="tel:+918943477156" class="social-btn call-btn" aria-label="Call Auxcare">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i> Call Us
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Swalihsaly369@gmail.com" target="_blank" rel="noopener noreferrer" class="social-btn email-btn" aria-label="Email Auxcare">
+                        <i class="fab fa-google" aria-hidden="true"></i> Gmail Us
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Auxcare. All rights reserved.</p>
+            <p>&copy; 2025 Auxcare. All rights reserved. | AC Repair & Services, Ernakulam, Kerala</p>
             <p class="footer-contact">
-                Quick Contact: <a href="tel:+91 8943477156">+91 8943477156</a> | <a href="mailto:Swalihsaly369@gmail.com">Swalihsaly369@gmail.com</a>
+                Quick Contact: <a href="tel:+918943477156">+91 8943477156</a> | <a href="mailto:Swalihsaly369@gmail.com">Swalihsaly369@gmail.com</a>
             </p>
             <button id="themeToggle" class="btn toggle-btn" aria-label="Toggle Dark/Light Theme">
-                <i class="fas fa-moon light-icon"></i>
-                <i class="fas fa-sun dark-icon"></i>
+                <i class="fas fa-moon light-icon" aria-hidden="true"></i>
+                <i class="fas fa-sun dark-icon" aria-hidden="true"></i>
             </button>
         </div>
     </footer>
@@ -592,13 +1031,9 @@
         const confirmationMessage = document.getElementById('confirmationMessage');
         const navLinks = document.querySelectorAll('.scroll-link, nav a');
 
-        // --- 1. Theme Toggle Functionality ---
+        // --- 1. Theme Toggle ---
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            body.className = savedTheme;
-        } else {
-            body.className = 'light-theme';
-        }
+        body.className = savedTheme || 'light-theme';
 
         themeToggle.addEventListener('click', () => {
             if (body.classList.contains('light-theme')) {
@@ -610,7 +1045,7 @@
             }
         });
 
-        // --- 2. Smooth Scroll for Navigation ---
+        // --- 2. Smooth Scroll ---
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
@@ -627,29 +1062,46 @@
             });
         });
 
-        // --- 3. Form Submission Handling (Client-Side Simulation) ---
-        issueForm.addEventListener('submit', function(e) {
+        // --- 3. Form Submission (Real — sends to Gmail via Formspree) ---
+        issueForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-
             const submitButton = issueForm.querySelector('button[type="submit"]');
             submitButton.disabled = true;
-            submitButton.innerText = 'Submitting...';
+            submitButton.innerText = 'Sending...';
 
             const formData = new FormData(issueForm);
-            const data = Object.fromEntries(formData.entries());
-            console.log('Form Submitted (Data to be sent):', data);
 
-            // Simulate successful submission
-            issueForm.style.display = 'none';
-            confirmationMessage.style.display = 'flex';
+            try {
+                const response = await fetch('https://formspree.io/f/mwvzvjjp', {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
 
-            setTimeout(() => {
-                issueForm.reset();
-                confirmationMessage.style.display = 'none';
-                issueForm.style.display = 'block';
+                if (response.ok) {
+                    // ✅ Success — show confirmation, reset form
+                    issueForm.style.display = 'none';
+                    confirmationMessage.style.display = 'flex';
+
+                    setTimeout(() => {
+                        issueForm.reset();
+                        confirmationMessage.style.display = 'none';
+                        issueForm.style.display = 'block';
+                        submitButton.disabled = false;
+                        submitButton.innerText = 'Submit Report';
+                    }, 8000);
+                } else {
+                    // ❌ Formspree returned an error
+                    submitButton.disabled = false;
+                    submitButton.innerText = 'Submit Report';
+                    alert('Something went wrong. Please try again or contact us directly on WhatsApp.');
+                }
+            } catch (error) {
+                // ❌ Network error
                 submitButton.disabled = false;
                 submitButton.innerText = 'Submit Report';
-            }, 8000);
+                alert('Could not send your message. Please check your internet connection and try again.');
+            }
         });
     });
     </script>
