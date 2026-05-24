@@ -38,7 +38,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Auxcare",
-      "description": "Professional AC repair, installation, gas refilling, coil cleaning and duct cleaning services in Ernakulam, North Paravur and Manjaly, Kerala.",
+      "description": "Professional AC installation, jet wash, deep cleaning, gas charging, leak fixing, mechanical repairs and periodic maintenance packages in Ernakulam, North Paravur, Aluva, Cherai and Kalamassery, Kerala.",
       "telephone": "+918943477156",
       "email": "Swalihsaly369@gmail.com",
       "url": "https://www.auxcare.in/",
@@ -48,7 +48,7 @@
         "addressRegion": "Kerala",
         "addressCountry": "IN"
       },
-      "areaServed": ["Ernakulam", "North Paravur", "Manjaly", "Kerala"],
+      "areaServed": ["Ernakulam", "North Paravur", "Aluva", "Cherai", "Kalamassery", "Manjaly", "Kerala"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "AC Services",
@@ -781,12 +781,351 @@
     .dark-theme .toggle-btn .dark-icon  { display: none; }
     .toggle-btn .dark-icon { display: none; }
 
-    /* --- Responsiveness --- */
+    /* Why Choose Us Section */
+    .why-choose {
+        background: linear-gradient(135deg, #f0f7ff 0%, #f8fff8 100%);
+        padding: 100px 0;
+    }
+
+    .dark-theme .why-choose {
+        background: linear-gradient(135deg, #1a2a3a 0%, #1a2e1a 100%);
+    }
+
+    .why-choose h2 {
+        text-align: center;
+        margin-bottom: 0.3em;
+    }
+
+    .why-choose .section-sub {
+        text-align: center;
+        opacity: 0.7;
+        font-size: 1em;
+        margin-bottom: 3em;
+    }
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 28px;
+        margin-bottom: 60px;
+    }
+
+    .why-card {
+        background: white;
+        border-radius: 16px;
+        padding: 32px 28px;
+        border: 1px solid rgba(0,123,255,0.1);
+        box-shadow: 0 4px 20px rgba(0,123,255,0.07);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .dark-theme .why-card {
+        background: #2c3340;
+        border-color: rgba(255,255,255,0.07);
+    }
+
+    .why-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 32px rgba(0,123,255,0.13);
+    }
+
+    .why-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--accent-color), var(--secondary-accent));
+    }
+
+    .why-icon-wrap {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        margin-bottom: 18px;
+    }
+
+    .why-icon-blue { background: rgba(0,123,255,0.1); color: var(--accent-color); }
+    .why-icon-green { background: rgba(40,167,69,0.1); color: var(--secondary-accent); }
+    .why-icon-gold { background: rgba(245,158,11,0.1); color: #f59e0b; }
+
+    .why-card h4 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+        color: var(--text-color);
+    }
+
+    .why-card p {
+        font-size: 0.9em;
+        opacity: 0.75;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* Locations strip */
+    .locations-strip {
+        background: white;
+        border-radius: 16px;
+        padding: 32px 36px;
+        border: 1px solid rgba(0,123,255,0.1);
+        box-shadow: 0 4px 20px rgba(0,123,255,0.07);
+        text-align: center;
+    }
+
+    .dark-theme .locations-strip {
+        background: #2c3340;
+        border-color: rgba(255,255,255,0.07);
+    }
+
+    .locations-strip h4 {
+        font-size: 1em;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        opacity: 0.55;
+        margin-bottom: 18px;
+        font-weight: 600;
+    }
+
+    .location-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .location-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: rgba(0,123,255,0.07);
+        border: 1px solid rgba(0,123,255,0.18);
+        color: var(--accent-color);
+        font-size: 0.88em;
+        font-weight: 600;
+        padding: 8px 18px;
+        border-radius: 50px;
+        transition: background 0.2s, transform 0.2s;
+    }
+
+    .location-tag:hover {
+        background: rgba(0,123,255,0.15);
+        transform: translateY(-2px);
+    }
+
+    .location-tag i { font-size: 0.85em; }
+
+    /* ── Service Card Illustrations ── */
+    .service-card { position: relative; overflow: hidden; text-align: left; }
+
+    .service-illustration {
+        width: 100%;
+        height: 130px;
+        border-radius: 10px;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .svc-install  { background: linear-gradient(135deg,#e8f4fd,#c8e6ff); }
+    .svc-wash     { background: linear-gradient(135deg,#e8fff0,#c8f5dc); }
+    .svc-gas      { background: linear-gradient(135deg,#fff8e8,#ffe8b0); }
+    .svc-repair   { background: linear-gradient(135deg,#fde8f0,#ffc8dc); }
+    .svc-maintain { background: linear-gradient(135deg,#f0e8ff,#dcc8ff); }
+    .svc-duct     { background: linear-gradient(135deg,#e8f8ff,#b0e8ff); }
+
+    .dark-theme .svc-install  { background: linear-gradient(135deg,#1a2e42,#0d1f35); }
+    .dark-theme .svc-wash     { background: linear-gradient(135deg,#1a2e22,#0d2018); }
+    .dark-theme .svc-gas      { background: linear-gradient(135deg,#2e2a1a,#201e0d); }
+    .dark-theme .svc-repair   { background: linear-gradient(135deg,#2e1a22,#200d18); }
+    .dark-theme .svc-maintain { background: linear-gradient(135deg,#221a2e,#180d20); }
+    .dark-theme .svc-duct     { background: linear-gradient(135deg,#1a2832,#0d1e28); }
+
+    .service-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+
+    .service-card-header i { font-size: 1.6em; }
+    .service-card h3 { margin-bottom: 0; font-size: 1.05em; text-align: left; }
+    .service-card p  { font-size: 0.88em; margin: 0; opacity: 0.82; }
+
+    /* ── About / Story Banner ── */
+    .about-banner {
+        background: linear-gradient(135deg, #1a1f35 0%, #2d3561 60%, #1a3520 100%);
+        padding: 90px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .about-banner::before {
+        content: '';
+        position: absolute; inset: 0;
+        background-image:
+            radial-gradient(circle at 20% 50%, rgba(0,123,255,0.15) 0%, transparent 50%),
+            radial-gradient(circle at 80% 30%, rgba(40,167,69,0.12) 0%, transparent 50%);
+        pointer-events: none;
+    }
+
+    .about-inner {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .about-graphic { flex-shrink: 0; }
+
+    .about-svg-wrap {
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.05);
+        border: 2px solid rgba(255,255,255,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .about-svg-wrap::before {
+        content: '';
+        position: absolute; inset: -14px;
+        border-radius: 50%;
+        border: 2px dashed rgba(0,123,255,0.35);
+        animation: spin-slow 20s linear infinite;
+    }
+
+    @keyframes spin-slow { to { transform: rotate(360deg); } }
+
+    .about-text { color: white; }
+    .about-text h2 { color: white; font-size: 2em; margin-bottom: 0.3em; }
+    .about-text .about-sub { color: #00d4ff; font-weight: 600; margin-bottom: 1em; font-size: 1em; display: block; }
+    .about-text p { color: rgba(255,255,255,0.8); font-size: 0.93em; margin-bottom: 1em; line-height: 1.75; }
+
+    .about-stats {
+        display: flex;
+        gap: 32px;
+        margin-top: 1.6em;
+        flex-wrap: wrap;
+    }
+
+    .about-stat { text-align: center; }
+    .about-stat-num { font-size: 2em; font-weight: 700; color: #00d4ff; display: block; line-height: 1; }
+    .about-stat-label { font-size: 0.72em; color: rgba(255,255,255,0.55); margin-top: 5px; display: block; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    @media (max-width: 900px) {
+        .about-inner { flex-direction: column; text-align: center; gap: 30px; }
+        .about-stats { justify-content: center; }
+        .about-svg-wrap { width: 180px; height: 180px; }
+    }
+
+    /* ── Map Section ── */
+    .map-section {
+        padding: 80px 0;
+        background: var(--card-bg);
+    }
+
+    .map-section h2 { text-align: center; margin-bottom: 0.3em; }
+
+    .map-sub {
+        text-align: center;
+        opacity: 0.65;
+        font-size: 0.95em;
+        margin-bottom: 2.5em;
+    }
+
+    .map-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 24px;
+        align-items: stretch;
+    }
+
+    .map-embed {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 30px var(--shadow-color);
+        border: 1px solid var(--border-color);
+        min-height: 360px;
+    }
+
+    .map-embed iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 360px;
+        border: none;
+        display: block;
+    }
+
+    .map-info-panel {
+        background: var(--bg-color);
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
+        padding: 26px 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        box-shadow: 0 4px 20px var(--shadow-color);
+    }
+
+    .map-info-title {
+        font-size: 1.05em;
+        font-weight: 700;
+        color: var(--accent-color);
+    }
+
+    .map-info-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+        font-size: 0.87em;
+        color: var(--text-color);
+        opacity: 0.85;
+        line-height: 1.5;
+    }
+
+    .map-info-row i {
+        color: var(--accent-color);
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+
+    .map-open-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: var(--accent-color);
+        color: white;
+        border-radius: 10px;
+        padding: 13px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9em;
+        transition: background 0.2s, transform 0.2s;
+        margin-top: auto;
+    }
+
+    .map-open-btn:hover { background: #0056b3; transform: translateY(-2px); }
+
+    @media (max-width: 860px) {
+        .map-wrapper { grid-template-columns: 1fr; }
+        .map-open-btn { width: 100%; }
+    }
+
     @media (max-width: 992px) {
-        .hero .container {
-            flex-direction: column;
-            text-align: center;
-        }
+        .hero .container { flex-direction: column; text-align: center; }
         nav { display: none; }
         header .container { justify-content: center; }
     }
@@ -809,8 +1148,11 @@
             <div class="logo">Auxcare<span class="dot">.</span></div>
             <nav aria-label="Main navigation">
                 <a href="#home" class="scroll-link">Home</a>
+                <a href="#about" class="scroll-link">About</a>
                 <a href="#services" class="scroll-link">Services</a>
+                <a href="#why" class="scroll-link">Why Us</a>
                 <a href="#report" class="scroll-link">Report an Issue</a>
+                <a href="#location" class="scroll-link">Location</a>
                 <a href="#connect" class="scroll-link">Connect</a>
             </nav>
         </div>
@@ -823,7 +1165,7 @@
                 <!-- LEFT: Text Content -->
                 <div class="content-left">
                     <div class="hero-badge">
-                        <i class="fas fa-map-marker-alt"></i> Serving Ernakulam, North Paravur & Manjaly
+                        <i class="fas fa-map-marker-alt"></i> Serving Ernakulam, Aluva, North Paravur, Cherai & Kalamassery
                     </div>
 
                     <!-- ✅ SEO: Real h1 with primary keyword -->
@@ -831,7 +1173,7 @@
 
                     <p class="tagline">Fast doorstep service · All brands · Homes & Offices</p>
 
-                    <p>We specialize in AC repair, installation, gas refilling, coil cleaning and duct cleaning — with same-day doorstep service across Ernakulam, North Paravur, and Manjaly. Whether your AC is not cooling, needs a refrigerant refill, or requires a full annual service, our expert technicians come to you.</p>
+                    <p>Auxcare AC Service is a premier provider of professional air conditioning installation, maintenance, and repair services — delivering top-tier cooling solutions to residential and commercial clients across Ernakulam, North Paravur, Aluva, Cherai, and Kalamassery. Whether your AC needs a jet wash, gas charging, mechanical repair, or a full periodic maintenance package, our certified technicians come directly to your doorstep.</p>
 
                     <div class="hero-cta-row">
                         <a href="#services" class="btn primary-btn scroll-link">Explore Services</a>
@@ -901,7 +1243,7 @@
                                 <span class="stat-label">Services Offered</span>
                             </div>
                             <div class="stat-box">
-                                <span class="stat-number">3</span>
+                                <span class="stat-number">5</span>
                                 <span class="stat-label">Areas Covered</span>
                             </div>
                         </div>
@@ -912,47 +1254,383 @@
             </div>
         </section>
 
-        <section id="services" class="services-grid">
+        <!-- ── About Us Banner ── -->
+        <section class="about-banner" id="about">
             <div class="container">
-                <!-- ✅ SEO: Section heading includes service keyword -->
-                <h2>Our AC Services in Ernakulam & North Paravur</h2>
-                <div class="grid">
-                    <!-- ✅ SEO: Service card headings use service-specific keywords -->
-                    <div class="service-card">
-                        <i class="fas fa-cogs icon-blue" aria-hidden="true"></i>
-                        <h3>AC Installation & Uninstallation</h3>
-                        <p>Planning to install a new split AC or window AC at your home or office in Ernakulam? Our technicians come directly to your location — whether it's a flat in Kakkanad, a shop in North Paravur, or an office in Aluva — and handle complete AC installation with proper bracket fitting, copper piping, and power connection. We also do safe uninstallation when shifting homes or upgrading units. All brands supported including LG, Samsung, Daikin, Voltas, and Hitachi.</p>
+                <div class="about-inner">
+                    <div class="about-graphic">
+                        <div class="about-svg-wrap">
+                            <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- large AC unit illustration -->
+                                <rect x="20" y="55" width="140" height="50" rx="12" fill="#2d6aad" opacity="0.85"/>
+                                <rect x="20" y="55" width="140" height="18" rx="12" fill="#1a4a8a"/>
+                                <!-- vents -->
+                                <rect x="32" y="83" width="18" height="4" rx="2" fill="white" opacity="0.35"/>
+                                <rect x="56" y="83" width="18" height="4" rx="2" fill="white" opacity="0.35"/>
+                                <rect x="80" y="83" width="18" height="4" rx="2" fill="white" opacity="0.35"/>
+                                <rect x="104" y="83" width="18" height="4" rx="2" fill="white" opacity="0.35"/>
+                                <rect x="128" y="83" width="18" height="4" rx="2" fill="white" opacity="0.35"/>
+                                <!-- display -->
+                                <rect x="32" y="62" width="44" height="12" rx="3" fill="rgba(0,212,255,0.2)"/>
+                                <text x="36" y="72" font-size="10" fill="#00d4ff" font-family="monospace" font-weight="bold">18°C</text>
+                                <!-- power light -->
+                                <circle cx="148" cy="64" r="6" fill="#00ff88" opacity="0.9"/>
+                                <!-- air flow lines below -->
+                                <path d="M45 110 Q43 122 45 132" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+                                <path d="M65 110 Q63 124 65 135" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+                                <path d="M85 110 Q83 121 85 131" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+                                <path d="M105 110 Q103 123 105 133" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+                                <path d="M125 110 Q123 122 125 132" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+                                <!-- snowflake center -->
+                                <text x="62" y="44" font-size="36" fill="rgba(0,212,255,0.25)" text-anchor="middle">❄</text>
+                                <text x="90" y="48" font-size="24" fill="rgba(0,212,255,0.4)" text-anchor="middle">❄</text>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <i class="fas fa-screwdriver-wrench icon-green" aria-hidden="true"></i>
-                        <h3>AC Repairs & Diagnostics</h3>
-                        <p>Is your AC not cooling properly even after running for hours? In Kerala's hot and humid climate, AC breakdowns are common — especially during summer and monsoon season. Our experts visit your home or office in Ernakulam, diagnose the exact problem on the spot, and carry out lasting repairs. We fix issues like compressor failure, PCB faults, water leakage, fan motor problems, and more. Fast same-day AC repair service available across North Paravur and Manjaly.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-hand-holding-box icon-blue" aria-hidden="true"></i>
-                        <h3>Coil Cleaning Service</h3>
-                        <p>Kerala's high humidity causes dust, mold, and fungal buildup on AC coils very quickly — making your AC work harder and cool less. Our coil cleaning service in Ernakulam removes this buildup from both the indoor evaporator coil and outdoor condenser coil using professional-grade tools and safe cleaning solutions. Result: better cooling, lower electricity bills, and fresher air in your home or workplace. Ideal before summer and after monsoon season.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-gas-pump icon-green" aria-hidden="true"></i>
-                        <h3>Gas Refilling (Refrigerant)</h3>
-                        <p>If your AC is running but not giving cold air, low refrigerant gas is one of the most common reasons — especially in older units across Kerala homes and offices. Our technicians visit your location in Ernakulam, North Paravur, or Manjaly, check the gas pressure with proper gauges, detect leaks if any, and refill the correct refrigerant (R22 or R32) at the right level. Safe, precise, and affordable AC gas refilling service at your doorstep — no need to dismantle the unit.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-wind icon-blue" aria-hidden="true"></i>
-                        <h3>Duct Cleaning Ernakulam</h3>
-                        <p>Commercial buildings, offices, hospitals, and hotels in Ernakulam that use central AC systems need regular duct cleaning to maintain healthy air quality. Kerala's damp climate causes dust, allergens, and bacteria to accumulate inside ducts — leading to musty smells and poor airflow. Auxcare's professional duct cleaning team visits your premises and thoroughly cleans the entire ductwork system, improving air circulation and reducing health risks for everyone inside the building.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-chart-line icon-green" aria-hidden="true"></i>
-                        <h3>AC Servicing & Maintenance</h3>
-                        <p>Regular AC servicing is essential in Kerala — dust from roads, salt air from the coast, and high moisture levels all affect your AC's performance over time. Our complete AC service package includes filter cleaning, coil washing, drain pipe clearing, gas pressure check, and full system inspection — all done at your home or office in Ernakulam, North Paravur, or Manjaly. We recommend servicing every 3 months for best results. Book a doorstep AC service today and keep your unit running at peak efficiency.</p>
+                    <div class="about-text">
+                        <h2>About Auxcare AC Service</h2>
+                        <span class="about-sub">Founded by Muhammed Swalih · Manjaly, North Paravur, Ernakulam</span>
+                        <p>Auxcare AC Service is a premier provider of professional air conditioning installation, maintenance, and repair services. We are dedicated to delivering top-tier cooling solutions to residential and commercial clients with a focus on absolute reliability, technical precision, and customer satisfaction.</p>
+                        <p>From a family home in Cherai to a commercial office block in Kalamassery — we bring certified expertise and prompt doorstep service to every job across Ernakulam district.</p>
+                        <div class="about-stats">
+                            <div class="about-stat">
+                                <span class="about-stat-num">500+</span>
+                                <span class="about-stat-label">ACs Serviced</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-num">5</span>
+                                <span class="about-stat-label">Areas Covered</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-num">6</span>
+                                <span class="about-stat-label">Services</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-num">100%</span>
+                                <span class="about-stat-label">Doorstep</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="report" class="report-issue">
+
+            <div class="container">
+                <h2>Our AC Services in Ernakulam, Aluva, North Paravur & Kalamassery</h2>
+                <div class="grid">
+                    <!-- Card 1: Installation -->
+                    <div class="service-card">
+                        <div class="service-illustration svc-install">
+                            <svg class="svc-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- wall unit body -->
+                                <rect x="10" y="30" width="100" height="38" rx="8" fill="#2d6aad" opacity="0.9"/>
+                                <rect x="10" y="30" width="100" height="12" rx="8" fill="#1a4a8a"/>
+                                <!-- vents -->
+                                <rect x="20" y="48" width="14" height="3" rx="1.5" fill="white" opacity="0.5"/>
+                                <rect x="38" y="48" width="14" height="3" rx="1.5" fill="white" opacity="0.5"/>
+                                <rect x="56" y="48" width="14" height="3" rx="1.5" fill="white" opacity="0.5"/>
+                                <rect x="74" y="48" width="14" height="3" rx="1.5" fill="white" opacity="0.5"/>
+                                <!-- power light -->
+                                <circle cx="95" cy="36" r="4" fill="#00ff88" opacity="0.9"/>
+                                <!-- temp display -->
+                                <rect x="20" y="34" width="30" height="8" rx="2" fill="rgba(0,212,255,0.2)"/>
+                                <text x="24" y="41" font-size="7" fill="#00d4ff" font-family="monospace">18°C</text>
+                                <!-- outdoor unit -->
+                                <rect x="28" y="78" width="36" height="28" rx="5" fill="#1a3a6a"/>
+                                <rect x="30" y="80" width="32" height="24" rx="3" fill="#0d2a4a"/>
+                                <!-- fan blades -->
+                                <circle cx="46" cy="92" r="8" fill="none" stroke="#2d6aad" stroke-width="2"/>
+                                <circle cx="46" cy="92" r="2" fill="#2d6aad"/>
+                                <line x1="46" y1="84" x2="46" y2="88" stroke="#00d4ff" stroke-width="2"/>
+                                <line x1="46" y1="96" x2="46" y2="100" stroke="#00d4ff" stroke-width="2"/>
+                                <line x1="38" y1="92" x2="42" y2="92" stroke="#00d4ff" stroke-width="2"/>
+                                <line x1="50" y1="92" x2="54" y2="92" stroke="#00d4ff" stroke-width="2"/>
+                                <!-- pipe -->
+                                <path d="M46 68 Q46 74 46 78" stroke="#aaa" stroke-width="3" stroke-dasharray="3 2"/>
+                                <!-- wrench icon -->
+                                <g transform="translate(72,74)">
+                                    <path d="M18 2a8 8 0 0 0-8 8c0 1.5.4 2.9 1.1 4.1L2 23.2A2.8 2.8 0 1 0 6 27l9.1-9.1A8 8 0 1 0 18 2z" fill="#f59e0b" transform="scale(0.55)"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="service-card-header">
+                            <i class="fas fa-cogs icon-blue" aria-hidden="true"></i>
+                            <h3>AC Installation & Dismantling</h3>
+                        </div>
+                        <p>Planning to install a new split AC or window AC at your home or office in Ernakulam, Aluva, or Kalamassery? Our certified technicians handle precision setup and safe dismantling of all premium AC units — with proper bracket fitting, copper piping, and electrical connection. We also handle full relocation when you're shifting homes or offices across North Paravur, Cherai, and surrounding areas. All major brands supported: LG, Samsung, Daikin, Voltas, Hitachi, and more.</p>
+                    </div>
+
+                    <!-- Card 2: Jet Wash -->
+                    <div class="service-card">
+                        <div class="service-illustration svc-wash">
+                            <svg class="svc-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- AC unit -->
+                                <rect x="15" y="25" width="70" height="35" rx="7" fill="#1a5a3a" opacity="0.85"/>
+                                <rect x="15" y="25" width="70" height="11" rx="7" fill="#0d3a25"/>
+                                <rect x="22" y="42" width="10" height="3" rx="1.5" fill="white" opacity="0.4"/>
+                                <rect x="36" y="42" width="10" height="3" rx="1.5" fill="white" opacity="0.4"/>
+                                <rect x="50" y="42" width="10" height="3" rx="1.5" fill="white" opacity="0.4"/>
+                                <circle cx="75" cy="31" r="3" fill="#00ff88" opacity="0.9"/>
+                                <!-- water drops / jet wash -->
+                                <path d="M30 65 Q28 72 30 78" stroke="#00aaff" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M42 65 Q40 73 42 80" stroke="#00aaff" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M54 65 Q52 71 54 77" stroke="#00aaff" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M66 65 Q64 72 66 79" stroke="#00aaff" stroke-width="2.5" stroke-linecap="round"/>
+                                <!-- droplets -->
+                                <ellipse cx="30" cy="82" rx="2" ry="3" fill="#00aaff" opacity="0.7"/>
+                                <ellipse cx="42" cy="84" rx="2" ry="3" fill="#00aaff" opacity="0.7"/>
+                                <ellipse cx="54" cy="81" rx="2" ry="3" fill="#00aaff" opacity="0.7"/>
+                                <ellipse cx="66" cy="83" rx="2" ry="3" fill="#00aaff" opacity="0.7"/>
+                                <!-- spray gun -->
+                                <rect x="82" y="48" width="22" height="10" rx="3" fill="#555"/>
+                                <rect x="88" y="58" width="8" height="14" rx="2" fill="#444"/>
+                                <path d="M82 53 L72 65" stroke="#555" stroke-width="3" stroke-linecap="round"/>
+                                <!-- sparkle clean marks -->
+                                <text x="88" y="42" font-size="10" fill="#00ff88">✦</text>
+                                <text x="97" y="50" font-size="7" fill="#00ff88">✦</text>
+                            </svg>
+                        </div>
+                        <div class="service-card-header">
+                            <i class="fas fa-shower icon-green" aria-hidden="true"></i>
+                            <h3>Jet Wash & Deep Cleaning</h3>
+                        </div>
+                        <p>Kerala's high humidity causes dust, mold, and fungal buildup on AC coils and filters very quickly — reducing cooling efficiency and increasing electricity bills. Our advanced jet wash and deep cleaning service uses high-pressure washing equipment to thoroughly clean indoor and outdoor units at your home or office in Ernakulam, Cherai, or Kalamassery. Result: optimized airflow, better indoor air quality, and a noticeably cooler room. Recommended every 3 months in Kerala's climate.</p>
+                    </div>
+
+                    <!-- Card 3: Gas Charging -->
+                    <div class="service-card">
+                        <div class="service-illustration svc-gas">
+                            <svg class="svc-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- gas cylinder -->
+                                <rect x="38" y="40" width="24" height="48" rx="10" fill="#c8860a"/>
+                                <rect x="38" y="40" width="24" height="12" rx="6" fill="#a06808"/>
+                                <rect x="44" y="34" width="12" height="8" rx="3" fill="#888"/>
+                                <!-- valve top -->
+                                <rect x="46" y="28" width="8" height="6" rx="2" fill="#555"/>
+                                <rect x="42" y="30" width="16" height="3" rx="1.5" fill="#666"/>
+                                <!-- label -->
+                                <rect x="41" y="58" width="18" height="18" rx="3" fill="rgba(255,255,255,0.3)"/>
+                                <text x="43" y="65" font-size="5" fill="white" font-weight="bold">R-32</text>
+                                <text x="43" y="72" font-size="4.5" fill="white">GAS</text>
+                                <!-- hose -->
+                                <path d="M62 52 Q80 52 84 60 Q88 68 82 75" stroke="#555" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                <!-- gauge -->
+                                <circle cx="88" cy="42" r="14" fill="#222" stroke="#888" stroke-width="2"/>
+                                <circle cx="88" cy="42" r="10" fill="#333"/>
+                                <path d="M88 42 L96 36" stroke="#ff4444" stroke-width="2" stroke-linecap="round"/>
+                                <text x="83" y="55" font-size="5" fill="#aaa">PSI</text>
+                                <!-- gas bubbles -->
+                                <circle cx="20" cy="55" r="3" fill="#ffd700" opacity="0.5"/>
+                                <circle cx="15" cy="45" r="2" fill="#ffd700" opacity="0.4"/>
+                                <circle cx="25" cy="40" r="2.5" fill="#ffd700" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <div class="service-card-header">
+                            <i class="fas fa-gas-pump icon-blue" aria-hidden="true"></i>
+                            <h3>Gas Charging & Leak Fixing</h3>
+                        </div>
+                        <p>If your AC is running but not giving cold air, low refrigerant gas or a gas leak is the most common cause — especially in older units across Kerala homes and offices. Our technicians visit your location in Ernakulam, North Paravur, Aluva, or Kalamassery, perform rigorous diagnostics to identify leaks, seal them professionally, and recharge the correct refrigerant (R22 or R32) to the right pressure level. Safe, precise, and affordable gas charging service at your doorstep.</p>
+                    </div>
+
+                    <!-- Card 4: Mechanical Repairs -->
+                    <div class="service-card">
+                        <div class="service-illustration svc-repair">
+                            <svg class="svc-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- PCB board -->
+                                <rect x="20" y="35" width="55" height="55" rx="4" fill="#1a3a1a"/>
+                                <rect x="22" y="37" width="51" height="51" rx="3" fill="#0f2a0f"/>
+                                <!-- circuit traces -->
+                                <line x1="30" y1="50" x2="60" y2="50" stroke="#00ff00" stroke-width="1" opacity="0.4"/>
+                                <line x1="40" y1="50" x2="40" y2="70" stroke="#00ff00" stroke-width="1" opacity="0.4"/>
+                                <line x1="30" y1="70" x2="65" y2="70" stroke="#00ff00" stroke-width="1" opacity="0.4"/>
+                                <line x1="55" y1="45" x2="55" y2="75" stroke="#00ff00" stroke-width="1" opacity="0.4"/>
+                                <!-- components -->
+                                <rect x="28" y="44" width="10" height="6" rx="1" fill="#333" stroke="#555" stroke-width="0.5"/>
+                                <rect x="50" y="62" width="12" height="6" rx="1" fill="#333" stroke="#555" stroke-width="0.5"/>
+                                <circle cx="40" cy="78" r="4" fill="#333" stroke="#555" stroke-width="0.5"/>
+                                <circle cx="55" cy="55" r="3" fill="#ff4444" opacity="0.8"/>
+                                <!-- fault spark -->
+                                <path d="M53 48 L57 54 L53 54 L57 60" stroke="#ffdd00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <!-- compressor -->
+                                <circle cx="88" cy="58" r="18" fill="#2a1a2a" stroke="#aa44aa" stroke-width="2"/>
+                                <circle cx="88" cy="58" r="12" fill="#1a0a1a"/>
+                                <!-- fan blades in compressor -->
+                                <line x1="88" y1="48" x2="88" y2="54" stroke="#aa44aa" stroke-width="2.5"/>
+                                <line x1="88" y1="62" x2="88" y2="68" stroke="#aa44aa" stroke-width="2.5"/>
+                                <line x1="78" y1="58" x2="84" y2="58" stroke="#aa44aa" stroke-width="2.5"/>
+                                <line x1="92" y1="58" x2="98" y2="58" stroke="#aa44aa" stroke-width="2.5"/>
+                                <circle cx="88" cy="58" r="3" fill="#aa44aa"/>
+                                <!-- wrench -->
+                                <path d="M20 90 L35 75" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="18" cy="92" r="4" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+                            </svg>
+                        </div>
+                        <div class="service-card-header">
+                            <i class="fas fa-screwdriver-wrench icon-green" aria-hidden="true"></i>
+                            <h3>All Mechanical Repairs</h3>
+                        </div>
+                        <p>Is your AC making unusual noises, tripping frequently, or simply not turning on? Our expert technicians are trained in comprehensive troubleshooting and repair of all AC mechanical components — including compressors, fan motors, control boards (PCBs), capacitors, and thermostats. We visit homes, flats, shops, and offices across Ernakulam, Cherai, Aluva, and Kalamassery for fast, reliable repairs with durable results. Same-day AC repair service available across all our service areas.</p>
+                    </div>
+
+                    <!-- Card 5: Maintenance -->
+                    <div class="service-card">
+                        <div class="service-illustration svc-maintain">
+                            <svg class="svc-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- calendar -->
+                                <rect x="15" y="30" width="55" height="55" rx="6" fill="#3a1a6a"/>
+                                <rect x="15" y="30" width="55" height="16" rx="6" fill="#5a2a9a"/>
+                                <rect x="15" y="38" width="55" height="8" fill="#5a2a9a"/>
+                                <!-- calendar hooks -->
+                                <rect x="27" y="24" width="5" height="12" rx="2.5" fill="#888"/>
+                                <rect x="53" y="24" width="5" height="12" rx="2.5" fill="#888"/>
+                                <!-- day grid -->
+                                <rect x="22" y="54" width="7" height="7" rx="1.5" fill="rgba(255,255,255,0.15)"/>
+                                <rect x="33" y="54" width="7" height="7" rx="1.5" fill="rgba(255,255,255,0.15)"/>
+                                <rect x="44" y="54" width="7" height="7" rx="1.5" fill="#7c3aed"/>
+                                <rect x="55" y="54" width="7" height="7" rx="1.5" fill="rgba(255,255,255,0.15)"/>
+                                <rect x="22" y="65" width="7" height="7" rx="1.5" fill="rgba(255,255,255,0.15)"/>
+                                <rect x="33" y="65" width="7" height="7" rx="1.5" fill="#7c3aed"/>
+                                <rect x="44" y="65" width="7" height="7" rx="1.5" fill="rgba(255,255,255,0.15)"/>
+                                <rect x="55" y="65" width="7" height="7" rx="1.5" fill="rgba(255,255,255,0.15)"/>
+                                <!-- check mark on highlighted day -->
+                                <path d="M46 57 L48 59 L52 55" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M35 68 L37 70 L41 66" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <!-- AC unit right side -->
+                                <rect x="78" y="38" width="30" height="22" rx="5" fill="#2d2060"/>
+                                <rect x="80" y="46" width="7" height="2.5" rx="1" fill="white" opacity="0.4"/>
+                                <rect x="90" y="46" width="7" height="2.5" rx="1" fill="white" opacity="0.4"/>
+                                <circle cx="100" cy="41" r="2.5" fill="#00ff88" opacity="0.9"/>
+                                <!-- health bar -->
+                                <rect x="78" y="64" width="30" height="5" rx="2.5" fill="rgba(255,255,255,0.1)"/>
+                                <rect x="78" y="64" width="22" height="5" rx="2.5" fill="#7c3aed"/>
+                                <text x="78" y="78" font-size="6" fill="rgba(255,255,255,0.6)">Health: 85%</text>
+                            </svg>
+                        </div>
+                        <div class="service-card-header">
+                            <i class="fas fa-calendar-check icon-blue" aria-hidden="true"></i>
+                            <h3>Periodic Maintenance Packages</h3>
+                        </div>
+                        <p>The best way to avoid sudden AC breakdowns — especially during Kerala's scorching summer and humid monsoon — is a scheduled maintenance plan. Our periodic maintenance packages include comprehensive inspections of all AC components, filter cleaning, coil washing, drain pipe clearing, gas pressure checks, and a full system health report. Available for homes, apartments, offices, and commercial spaces across Ernakulam, North Paravur, Aluva, Cherai, and Kalamassery. Keep your AC running smoothly all year round.</p>
+                    </div>
+
+                    <!-- Card 6: Duct Cleaning -->
+                    <div class="service-card">
+                        <div class="service-illustration svc-duct">
+                            <svg class="svc-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- main duct horizontal -->
+                                <rect x="10" y="45" width="80" height="18" rx="4" fill="#1a4060"/>
+                                <rect x="10" y="45" width="80" height="6" rx="4" fill="#0d2a40"/>
+                                <!-- duct branch down -->
+                                <rect x="32" y="63" width="14" height="28" rx="3" fill="#1a4060"/>
+                                <rect x="32" y="63" width="14" height="5" fill="#0d2a40"/>
+                                <!-- duct branch 2 -->
+                                <rect x="60" y="63" width="14" height="20" rx="3" fill="#1a4060"/>
+                                <!-- vents at end -->
+                                <rect x="30" y="89" width="18" height="6" rx="3" fill="#0d2a40"/>
+                                <line x1="33" y1="90" x2="33" y2="94" stroke="#00aaff" stroke-width="1" opacity="0.5"/>
+                                <line x1="37" y1="90" x2="37" y2="94" stroke="#00aaff" stroke-width="1" opacity="0.5"/>
+                                <line x1="41" y1="90" x2="41" y2="94" stroke="#00aaff" stroke-width="1" opacity="0.5"/>
+                                <line x1="45" y1="90" x2="45" y2="94" stroke="#00aaff" stroke-width="1" opacity="0.5"/>
+                                <!-- air flow arrows -->
+                                <path d="M20 54 L28 54" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M26 51 L30 54 L26 57" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M48 54 L58 54" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M56 51 L60 54 L56 57" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <!-- dust particles being removed -->
+                                <circle cx="22" cy="58" r="2" fill="#aaa" opacity="0.4"/>
+                                <circle cx="50" cy="52" r="1.5" fill="#aaa" opacity="0.3"/>
+                                <circle cx="75" cy="57" r="2" fill="#aaa" opacity="0.4"/>
+                                <!-- brush / cleaning tool -->
+                                <rect x="88" y="28" width="6" height="30" rx="3" fill="#888"/>
+                                <rect x="84" y="55" width="14" height="5" rx="2" fill="#555"/>
+                                <!-- bristles -->
+                                <line x1="86" y1="60" x2="84" y2="66" stroke="#aaa" stroke-width="1.5"/>
+                                <line x1="89" y1="60" x2="88" y2="67" stroke="#aaa" stroke-width="1.5"/>
+                                <line x1="92" y1="60" x2="92" y2="67" stroke="#aaa" stroke-width="1.5"/>
+                                <line x1="95" y1="60" x2="96" y2="66" stroke="#aaa" stroke-width="1.5"/>
+                                <line x1="98" y1="60" x2="100" y2="65" stroke="#aaa" stroke-width="1.5"/>
+                                <!-- clean sparkles -->
+                                <text x="10" y="32" font-size="9" fill="#00d4ff" opacity="0.7">✦</text>
+                                <text x="100" y="80" font-size="7" fill="#00d4ff" opacity="0.6">✦</text>
+                            </svg>
+                        </div>
+                        <div class="service-card-header">
+                            <i class="fas fa-wind icon-green" aria-hidden="true"></i>
+                            <h3>Duct Cleaning & Air Quality</h3>
+                        </div>
+                        <p>Commercial buildings, offices, hospitals, and hotels in Ernakulam and Kalamassery that use central AC systems need regular duct cleaning to maintain healthy indoor air quality. Kerala's damp climate causes dust, allergens, and bacteria to accumulate inside ducts — leading to musty smells, poor airflow, and health issues. Auxcare's professional duct cleaning team visits your premises and thoroughly cleans the entire ductwork, improving air circulation for everyone inside the building.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why" class="why-choose">
+            <div class="container">
+                <h2>Why Choose Auxcare?</h2>
+                <p class="section-sub">Trusted by homes and businesses across Ernakulam, Aluva, North Paravur, Cherai & Kalamassery</p>
+
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-icon-wrap why-icon-blue">
+                            <i class="fas fa-user-check" aria-hidden="true"></i>
+                        </div>
+                        <h4>Expert Engineering</h4>
+                        <p>Every service is delivered by certified, trained AC professionals with hands-on experience in all major brands and unit types. You get technical precision, not guesswork — whether it's a simple gas refill or a full compressor replacement.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon-wrap why-icon-green">
+                            <i class="fas fa-bolt" aria-hidden="true"></i>
+                        </div>
+                        <h4>Prompt Response</h4>
+                        <p>We understand that a broken AC in Kerala's heat is an emergency. Auxcare offers fast, reliable same-day response across Ernakulam, Aluva, North Paravur, Cherai, and Kalamassery — because your comfort can't wait.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon-wrap why-icon-gold">
+                            <i class="fas fa-tags" aria-hidden="true"></i>
+                        </div>
+                        <h4>Transparent Pricing</h4>
+                        <p>No hidden charges, no surprise bills. Auxcare believes in upfront, competitive pricing — you'll know exactly what you're paying for before our technician even begins the job. Fair rates for homes and commercial clients alike.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon-wrap why-icon-blue">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                        </div>
+                        <h4>Doorstep Service</h4>
+                        <p>We come to you — homes, apartments, offices, shops, and commercial spaces. No need to dismantle your AC and carry it anywhere. Our technicians arrive fully equipped to complete the job at your location across all our service areas.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon-wrap why-icon-green">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        </div>
+                        <h4>Service Warranty</h4>
+                        <p>We stand behind our work. All repairs and services by Auxcare come with a service warranty — giving you peace of mind that if the same issue reappears, we'll be back to fix it without hassle.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon-wrap why-icon-gold">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                        </div>
+                        <h4>Residential & Commercial</h4>
+                        <p>From a single split AC in a family home in Cherai to a full fleet of commercial units in an office block in Kalamassery — Auxcare has the capacity and expertise to handle both residential and commercial AC needs with equal professionalism.</p>
+                    </div>
+                </div>
+
+                <!-- Locations strip -->
+                <div class="locations-strip">
+                    <h4>Areas We Serve</h4>
+                    <div class="location-tags">
+                        <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Ernakulam</span>
+                        <span class="location-tag"><i class="fas fa-map-marker-alt"></i> North Paravur</span>
+                        <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Aluva</span>
+                        <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Cherai</span>
+                        <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Kalamassery</span>
+                        <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Manjaly</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
             <div class="container">
                 <h2>Report an AC Issue</h2>
                 <p>Describe your AC problem and one of our expert AC technicians in Kerala will contact you shortly.</p>
@@ -986,11 +1664,59 @@
             </div>
         </section>
 
+        <!-- ── Google Map Section ── -->
+        <section class="map-section" id="location">
+            <div class="container">
+                <h2>Find Us — Manjaly, North Paravur</h2>
+                <p class="map-sub">Click the map or the button below to open directions in Google Maps</p>
+                <div class="map-wrapper">
+                    <div class="map-embed">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.0!2d76.2144!3d10.1408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d865e5deddd%3A0x3b7b4b4b4b4b4b4b!2sManjaly%2C%20North%20Paravur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Auxcare AC Service location - Manjaly, North Paravur, Ernakulam, Kerala">
+                        </iframe>
+                    </div>
+                    <div class="map-info-panel">
+                        <div class="map-info-title">📍 Auxcare AC Service</div>
+                        <div class="map-info-row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Manjaly, North Paravur, Ernakulam, Kerala</span>
+                        </div>
+                        <div class="map-info-row">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 89434 77156</span>
+                        </div>
+                        <div class="map-info-row">
+                            <i class="fas fa-envelope"></i>
+                            <span>Swalihsaly369@gmail.com</span>
+                        </div>
+                        <div class="map-info-row">
+                            <i class="fas fa-clock"></i>
+                            <span>Available 7 days a week · Same-day service</span>
+                        </div>
+                        <div class="map-info-row">
+                            <i class="fas fa-route"></i>
+                            <span>Serving: Ernakulam · North Paravur · Aluva · Cherai · Kalamassery</span>
+                        </div>
+                        <a href="https://maps.google.com/?q=Manjaly,North+Paravur,Ernakulam,Kerala"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="map-open-btn">
+                            <i class="fas fa-map-marked-alt"></i> Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="connect" class="connect">
             <div class="container">
                 <h2>Connect with Auxcare</h2>
                 <!-- ✅ SEO FIX: Corrected closing tag, expanded location name -->
-                <p>Serving Ernakulam, North Paravur, and Manjaly, Kerala</p>
+                <p>Serving Ernakulam, North Paravur, Aluva, Cherai, Kalamassery & Manjaly, Kerala</p>
                 <p>We're available through multiple platforms — choose what works best for you!</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/aux.care_?igsh=b25vdWgxZW5tbGNj" target="_blank" rel="noopener noreferrer" class="social-btn instagram-btn" aria-label="Follow Auxcare on Instagram">
@@ -1012,7 +1738,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Auxcare. All rights reserved. | AC Repair & Services, Ernakulam, Kerala</p>
+            <p>&copy; 2025 Auxcare AC Service. All rights reserved. | AC Repair & Services across Ernakulam, Aluva, North Paravur, Cherai & Kalamassery, Kerala</p>
             <p class="footer-contact">
                 Quick Contact: <a href="tel:+918943477156">+91 8943477156</a> | <a href="mailto:Swalihsaly369@gmail.com">Swalihsaly369@gmail.com</a>
             </p>
